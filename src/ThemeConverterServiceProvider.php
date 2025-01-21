@@ -2,9 +2,9 @@
 
 namespace Pankaj\ThemeConverter;
 
+use Pankaj\ThemeConverter\Commands\ThemeConverterCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Pankaj\ThemeConverter\Commands\ThemeConverterCommand;
 
 class ThemeConverterServiceProvider extends PackageServiceProvider
 {
