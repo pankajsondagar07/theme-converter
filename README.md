@@ -1,4 +1,6 @@
-# A custom Laravel package that generates Blade files based on uploaded theme zip files, AdminLTE, Gentellia, Bootstrap themes, etc., into Laravel projects. Users can upload the theme zip file, and the package automatically converts the template files into Blade syntax, making them ready for use in Laravel views
+# Simplifying Theme Integration
+
+A custom Laravel package that generates Blade files based on uploaded theme zip files, AdminLTE, Gentellia, Bootstrap themes, etc., into Laravel projects. Users can upload the theme zip file, and the package automatically converts the template files into Blade syntax, making them ready for use in Laravel views
 
 ## Installation
 
