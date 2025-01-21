@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "pankaj/theme-converter",
+    "description": "A custom Laravel package that generates Blade files based on uploaded theme zip files, AdminLTE, Gentellia, Bootstrap themes, etc., into Laravel projects. Users can upload the theme zip file, and the package automatically converts the template files into Blade syntax, making them ready for use in Laravel views",
     "keywords": [
-        ":vendor_name",
+        "pankaj",
         "laravel",
-        ":package_slug"
+        "theme-converter"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/pankaj/theme-converter",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Pankaj Sondagar",
+            "email": "pankaj@krishaweb.com",
             "role": "Developer"
         }
     ],
@@ -35,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "Pankaj\\ThemeConverter\\": "src/",
+            "Pankaj\\ThemeConverter\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/",
+            "Pankaj\\ThemeConverter\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -63,10 +63,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Pankaj\\ThemeConverter\\ThemeConverterServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "ThemeConverter": "Pankaj\\ThemeConverter\\Facades\\ThemeConverter"
             }
         }
     },

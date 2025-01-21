@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Pankaj\ThemeConverter\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class ThemeConverterCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'theme-converter';
 
     public $description = 'My command';
 
