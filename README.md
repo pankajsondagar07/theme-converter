@@ -1,6 +1,24 @@
 # Simplifying Theme Integration
 
-A custom Laravel package that generates Blade files based on uploaded theme zip files, AdminLTE, Gentellia, Bootstrap themes, etc., into Laravel projects. Users can upload the theme zip file, and the package automatically converts the template files into Blade syntax, making them ready for use in Laravel views
+[![Latest Version](https://img.shields.io/packagist/v/pankaj/theme-converter.svg?style=flat-square)](https://packagist.org/packages/pankaj/theme-converter)
+[![Total Downloads](https://img.shields.io/packagist/dt/pankaj/theme-converter.svg?style=flat-square)](https://packagist.org/packages/pankaj/theme-converter)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Tests](https://github.com/pankajsondagar07/theme-converter/actions/workflows/tests.yml/badge.svg)](https://github.com/pankajsondagar07/theme-converter/actions)
+
+✨ **Automatically Convert HTML Themes to Laravel Blade Templates** ✨
+
+The Laravel Theme Converter package simplifies theme integration by automatically converting HTML themes (AdminLTE, Gentella, Bootstrap, etc.) into fully functional Laravel Blade templates with a single command.
+
+## 🔥 Features
+
+- **One-command conversion** of HTML themes to Blade templates
+- **Automatic layout detection** - identifies master templates
+- **Smart asset handling** - rewrites paths using `asset()` helper
+- **Template partials conversion** to Blade `@include` directives
+- **Section detection** for headers, footers, and content areas
+- **Supports popular admin themes**: AdminLTE, Gentella, CoreUI
+- **Configurable rules** for custom theme structures
+- **Preserves directory structure** from original theme
 
 ## Installation
 
