@@ -29,7 +29,7 @@ class ThemeConverterServiceProvider extends ServiceProvider
         );
 
         $this->app->singleton('theme-converter', function () {
-            return new ThemeConverter();
+            return new ThemeConverter;
         });
     }
 }

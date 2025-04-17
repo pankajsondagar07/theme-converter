@@ -20,12 +20,13 @@ class ThemeConverterCommand extends Command
         $themeName = $this->option('name');
         $noLayout = $this->option('no-layout');
 
-        if (!file_exists($zipPath)) {
+        if (! file_exists($zipPath)) {
             $this->error("Zip file not found: {$zipPath}");
+
             return 1;
         }
 
-        $this->info("Converting theme..." . ($noLayout ? ' (layout detection disabled)' : ''));
+        $this->info('Converting theme...'.($noLayout ? ' (layout detection disabled)' : ''));
 
         try {
             if ($noLayout) {
@@ -33,18 +34,19 @@ class ThemeConverterCommand extends Command
             }
 
             $outputPath = $converter->convert($zipPath, $themeName);
-            
-            if (!$noLayout && $converter->hasDetectedLayout()) {
-                $this->info("✔ Layout detected and converted");
+
+            if (! $noLayout && $converter->hasDetectedLayout()) {
+                $this->info('✔ Layout detected and converted');
                 $this->line("  Layout file: {$outputPath}/layouts/layout.blade.php");
-                $this->line("  Pages will extend this layout automatically");
+                $this->line('  Pages will extend this layout automatically');
             }
 
-            $this->info("Theme converted successfully!");
+            $this->info('Theme converted successfully!');
             $this->line("Blade files created at: {$outputPath}");
-            $this->line("Assets copied to: " . public_path('themes/' . ($themeName ?? pathinfo($zipPath, PATHINFO_FILENAME))));
+            $this->line('Assets copied to: '.public_path('themes/'.($themeName ?? pathinfo($zipPath, PATHINFO_FILENAME))));
         } catch (\Exception $e) {
-            $this->error("Conversion failed: " . $e->getMessage());
+            $this->error('Conversion failed: '.$e->getMessage());
+
             return 1;
         }
 

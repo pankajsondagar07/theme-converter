@@ -28,9 +28,9 @@ return [
             'template',
             'main',
             'wrapper',
-            'app'
+            'app',
         ],
-        
+
         'markers' => [
             '<!DOCTYPE html>',
             '<html',
@@ -38,19 +38,19 @@ return [
             '</head>',
             '<body>',
             '</body>',
-            '</html>'
+            '</html>',
         ],
-        
+
         'sections' => [
             'head' => ['<head', '</head>'],
             'header' => ['<header', '</header>', 'id="header"', 'class="header"'],
             'footer' => ['<footer', '</footer>', 'id="footer"', 'class="footer"'],
             'sidebar' => ['<aside', '</aside>', 'id="sidebar"', 'class="sidebar"'],
-            'content' => ['<main', '</main>', 'id="content"', 'id="main"', 'class="content"', 'class="main"']
+            'content' => ['<main', '</main>', 'id="content"', 'id="main"', 'class="content"', 'class="main"'],
         ],
-        
+
         'filename' => 'layout.blade.php',
-        
-        'directory' => 'layouts'
-    ]
+
+        'directory' => 'layouts',
+    ],
 ];
