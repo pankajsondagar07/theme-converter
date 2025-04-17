@@ -1,9 +1,9 @@
 # Simplifying Theme Integration
 
-[![Latest Version](https://img.shields.io/packagist/v/pankaj/theme-converter.svg?style=flat-square)](https://packagist.org/packages/pankaj/theme-converter)
+<!-- [![Latest Version](https://img.shields.io/packagist/v/pankaj/theme-converter.svg?style=flat-square)](https://packagist.org/packages/pankaj/theme-converter)
 [![Total Downloads](https://img.shields.io/packagist/dt/pankaj/theme-converter.svg?style=flat-square)](https://packagist.org/packages/pankaj/theme-converter)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Tests](https://github.com/pankajsondagar07/theme-converter/actions/workflows/tests.yml/badge.svg)](https://github.com/pankajsondagar07/theme-converter/actions)
+[![Tests](https://github.com/pankajsondagar07/theme-converter/actions/workflows/tests.yml/badge.svg)](https://github.com/pankajsondagar07/theme-converter/actions) -->
 
 ✨ **Automatically Convert HTML Themes to Laravel Blade Templates** ✨
 
