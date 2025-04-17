@@ -2,24 +2,34 @@
 
 namespace Pankaj\ThemeConverter;
 
-use Pankaj\ThemeConverter\Commands\ThemeConverterCommand;
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Illuminate\Support\ServiceProvider;
+use Pankaj\ThemeConverter\Commands\ConvertThemeCommand;
 
-class ThemeConverterServiceProvider extends PackageServiceProvider
+class ThemeConverterServiceProvider extends ServiceProvider
 {
-    public function configurePackage(Package $package): void
+    public function boot()
     {
-        /*
-         * This class is a Package Service Provider
-         *
-         * More info: https://github.com/spatie/laravel-package-tools
-         */
-        $package
-            ->name('theme-converter')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_theme_converter_table')
-            ->hasCommand(ThemeConverterCommand::class);
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                ConvertThemeCommand::class,
+            ]);
+        }
+
+        $this->publishes([
+            __DIR__.'/../config/theme-converter.php' => config_path('theme-converter.php'),
+        ], 'config');
+
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'theme-converter');
+    }
+
+    public function register()
+    {
+        $this->mergeConfigFrom(
+            __DIR__.'/../config/theme-converter.php', 'theme-converter'
+        );
+
+        $this->app->singleton('theme-converter', function () {
+            return new ThemeConverter();
+        });
     }
 }
